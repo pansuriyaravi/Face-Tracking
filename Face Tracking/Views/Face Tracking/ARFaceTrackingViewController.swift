@@ -8,7 +8,10 @@
 
 import ARKit
 import Foundation
+import os.log
 import UIKit
+
+private let logger = Logger(subsystem: "FaceTracking", category: "ARFaceTrackingViewController")
 
 class ARFaceTrackingViewController: UIViewController {
     private var sceneView: ARSCNView? = nil
@@ -96,8 +99,8 @@ private extension ARFaceTrackingViewController {
         else {
             return nil
         }
-                
-        material.diffuse.contents = UIImage(named: "wireframeTexture") // Example texture map image.
+        
+        material.fillMode = .lines
         material.lightingModel = .physicallyBased
         
         let contentNode = SCNNode(geometry: faceGeometry)
@@ -152,6 +155,10 @@ extension ARFaceTrackingViewController: ARSCNViewDelegate {
         }
         
         faceGeometry.update(from: faceAnchor.geometry)
+
+        let facePosition = faceAnchor.transform.position()
+        // Print out the direction vector
+        logger.debug("Face Direction: \(String(describing: facePosition))")
     }
     
     func renderer(_ renderer: any SCNSceneRenderer, didRemove node: SCNNode, for anchor: ARAnchor) {
