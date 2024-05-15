@@ -108,6 +108,16 @@ private extension ARFaceTrackingViewController {
         
         return contentNode
     }
+    
+    func trackFacePosition(anchor: ARFaceAnchor) {
+        let facePosition = anchor.transform.position()
+        let leftEye = anchor.leftEyeTransform.position()
+        let rightEye = anchor.rightEyeTransform.position()
+        // Print out the direction vector
+        logger.debug("Face Posstion: \(String(describing: facePosition))")
+        logger.debug("leftEye Posstion: \(String(describing: leftEye))")
+        logger.debug("rightEye Posstion: \(String(describing: rightEye))")
+    }
 }
 
 // MARK: ARSessionDelegate
@@ -143,6 +153,8 @@ extension ARFaceTrackingViewController: ARSCNViewDelegate {
                 self.faceAnchorsNodes[faceAnchor] = contentNode
             }
         }
+        
+        trackFacePosition(anchor: faceAnchor)
     }
     
     /// - Tag: ARFaceGeometryUpdate
@@ -155,10 +167,7 @@ extension ARFaceTrackingViewController: ARSCNViewDelegate {
         }
         
         faceGeometry.update(from: faceAnchor.geometry)
-
-        let facePosition = faceAnchor.transform.position()
-        // Print out the direction vector
-        logger.debug("Face Direction: \(String(describing: facePosition))")
+        trackFacePosition(anchor: faceAnchor)
     }
     
     func renderer(_ renderer: any SCNSceneRenderer, didRemove node: SCNNode, for anchor: ARAnchor) {
