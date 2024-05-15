@@ -11,6 +11,8 @@
 		41579EEC2BF4A47F000ECA0D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41579EEB2BF4A47F000ECA0D /* ContentView.swift */; };
 		41579EEE2BF4A480000ECA0D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 41579EED2BF4A480000ECA0D /* Assets.xcassets */; };
 		41579EF12BF4A480000ECA0D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 41579EF02BF4A480000ECA0D /* Preview Assets.xcassets */; };
+		41579F1B2BF4C291000ECA0D /* ARFaceTrackingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41579F1A2BF4C291000ECA0D /* ARFaceTrackingViewController.swift */; };
+		41579F1D2BF4CA40000ECA0D /* ARFaceTrackingViewControllerRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41579F1C2BF4CA40000ECA0D /* ARFaceTrackingViewControllerRepresentable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,8 @@
 		41579EEB2BF4A47F000ECA0D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		41579EED2BF4A480000ECA0D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		41579EF02BF4A480000ECA0D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		41579F1A2BF4C291000ECA0D /* ARFaceTrackingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARFaceTrackingViewController.swift; sourceTree = "<group>"; };
+		41579F1C2BF4CA40000ECA0D /* ARFaceTrackingViewControllerRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARFaceTrackingViewControllerRepresentable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,9 +55,9 @@
 		41579EE82BF4A47F000ECA0D /* Face Tracking */ = {
 			isa = PBXGroup;
 			children = (
-				41579EE92BF4A47F000ECA0D /* Face_TrackingApp.swift */,
-				41579EEB2BF4A47F000ECA0D /* ContentView.swift */,
-				41579EED2BF4A480000ECA0D /* Assets.xcassets */,
+				41579F112BF4A4A4000ECA0D /* App */,
+				41579F122BF4A4A6000ECA0D /* Views */,
+				41579F132BF4A4AA000ECA0D /* Resources */,
 				41579EEF2BF4A480000ECA0D /* Preview Content */,
 			);
 			path = "Face Tracking";
@@ -65,6 +69,40 @@
 				41579EF02BF4A480000ECA0D /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		41579F112BF4A4A4000ECA0D /* App */ = {
+			isa = PBXGroup;
+			children = (
+				41579EE92BF4A47F000ECA0D /* Face_TrackingApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		41579F122BF4A4A6000ECA0D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				41579F192BF4C278000ECA0D /* Face Tracking */,
+				41579EEB2BF4A47F000ECA0D /* ContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		41579F132BF4A4AA000ECA0D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				41579EED2BF4A480000ECA0D /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		41579F192BF4C278000ECA0D /* Face Tracking */ = {
+			isa = PBXGroup;
+			children = (
+				41579F1A2BF4C291000ECA0D /* ARFaceTrackingViewController.swift */,
+				41579F1C2BF4CA40000ECA0D /* ARFaceTrackingViewControllerRepresentable.swift */,
+			);
+			path = "Face Tracking";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,7 +176,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				41579EEC2BF4A47F000ECA0D /* ContentView.swift in Sources */,
+				41579F1B2BF4C291000ECA0D /* ARFaceTrackingViewController.swift in Sources */,
 				41579EEA2BF4A47F000ECA0D /* Face_TrackingApp.swift in Sources */,
+				41579F1D2BF4CA40000ECA0D /* ARFaceTrackingViewControllerRepresentable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -197,7 +237,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -254,7 +294,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -272,13 +312,17 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Face Tracking/Preview Content\"";
+				DEVELOPMENT_TEAM = U7XVUW953J;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "The camera is used for augmenting reality";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIRequiredDeviceCapabilities = arkit;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -300,13 +344,17 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Face Tracking/Preview Content\"";
+				DEVELOPMENT_TEAM = U7XVUW953J;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "The camera is used for augmenting reality";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIRequiredDeviceCapabilities = arkit;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
